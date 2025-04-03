@@ -4,13 +4,11 @@ Welcome to my repository for college codes and exercises! 🚀
 
 ## 📂 REPOSITORY STRUCTURE
 - **C** - Codes and exercises in C language.
-- **Python** - Scripts and projects in Python.
 - **HTML and CSS** - Web development assignments.
 - **Others** - Materials and codes from additional subjects.
 
 ## 🛠 REQUIREMENTS
 Make sure you have the following installed:
-- Python 3.x ([Download Python](https://www.python.org/))
 - VSCode or any preferred IDE/text editor.
 - Required libraries listed in `requirements.txt` (if any).
 

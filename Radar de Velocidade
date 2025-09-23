@@ -1,0 +1,56 @@
+#include<stdio.h>
+#include<ctype.h>
+
+int main(){
+	
+	float velocidade;
+	unsigned short limite_da_via;
+	char tipo_da_via;
+	float tolerancia, limite_com_tolerancia;
+	
+	printf("Digite a velocidade do veiculo [km/h]: ");
+	scanf("%f", &velocidade);
+	
+	printf("Digite o limite da via [km/h]: ");
+	scanf("%hu", &limite_da_via);
+	
+	printf("Digite o tipo da via [U=Urbana|R=Rodovia]: ");
+	scanf(" %c", &tipo_da_via);
+	
+	printf("\n");
+	
+tolerancia, limite_com_tolerancia;
+	
+	if (tipo_da_via=='U' || tipo_da_via=='u'){
+		tolerancia = 1.07;
+	}
+	else if (tipo_da_via=='R' || tipo_da_via=='r'){
+		tolerancia = 1.05;
+	}
+	
+	limite_com_tolerancia = tolerancia*limite_da_via;
+	
+	float excesso = velocidade-limite_com_tolerancia;
+	float percentual = excesso / limite_com_tolerancia;
+	double multa;
+	
+	if(velocidade>limite_com_tolerancia){
+		if (percentual<0.2){
+			multa = 130.16;
+			printf("Multa de %.2lf", multa);
+		}
+		else if(percentual>=0.2 || velocidade<= 0.5){
+			multa = 195.23;
+			printf("Multa de: %.2lf", multa);
+		}
+		else{
+			multa = 880.41;
+			printf("multa de: %.2lf", multa);
+		}
+	}
+	else{
+		printf("Velocidade normal na via! Sem Multa");
+	}
+	
+	return 0;
+}
